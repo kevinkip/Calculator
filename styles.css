@@ -7,6 +7,17 @@ body{
     min-height: 100vh;
 }
 
+.calculator{
+    border-style: solid;
+    background-color: black;
+    border-radius: 5px;
+}
+.span{
+    grid-column: span 2;
+    color: #adf802;
+    background-color: rgba(139, 0, 139, 0.8);
+}
+
 .inputField{
     grid-column: 1 / -1;
     background-color: rgba(0, 0, 0, 0.75);
@@ -17,7 +28,7 @@ body{
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
-    height: 50px;
+    height: 60px;
     color: #ffffff;
   }
 
@@ -33,9 +44,6 @@ body{
 
 .calculator{
     display: grid;
-    /* justify-content: center;
-    align-items: center;
-    height: 30%; */
 }
 
 .row > button {
@@ -43,7 +51,6 @@ body{
     font-size: 2rem;
     border: 1px, solid #ffffff;
     outline: none;
-    background-color: rgba(255,255,255,0.75);
 }
 
 .row > button:hover{
@@ -53,12 +60,4 @@ body{
 .row{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* flex-direction: row;
-    justify-content: center;
-    align-content: stretch; */
 }
-
-/* button{
-    height: 100%;
-    width: 100%;
-} */
