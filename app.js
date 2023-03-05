@@ -14,6 +14,10 @@ class Calculator{
     delete() {
         this.currentOperand = this.currentOperand.toString().slice(0,-1)
     }
+
+    percentize(){
+        this.currentOperand = this.currentOperand / 100;
+    }
     
     appendNumber(number) {
         if(number === '.' && this.currentOperand.includes('.')) return
@@ -87,6 +91,7 @@ class Calculator{
 
 const numButtons = document.querySelectorAll('[data-number]');
 const opButtons = document.querySelectorAll('[data-operation]');
+const percent = document.querySelector('[data-percent]');
 const equalsButton = document.querySelector('[data-equals]');
 const deleteButton = document.querySelector('[data-delete]');
 const clearButton = document.querySelector('[data-clear]');
@@ -110,6 +115,11 @@ opButtons.forEach(button => {
         calculator.chooseOperation(button.innerText)
         calculator.updateDisplay()
     })
+})
+
+percent.addEventListener('click', button => {
+    calculator.percentize()
+    calculator.updateDisplay()
 })
 
 equalsButton.addEventListener('click', button => {
